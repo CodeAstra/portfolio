@@ -1,0 +1,169 @@
+body {
+  @include main-font;
+  background-color: $light-bg-color;
+  color: $dark-font-color;
+  position: relative;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include thin-font;
+}
+
+main p a, main li a {
+  border-bottom: 1px solid transparent;
+
+  &, &:hover, &:visited, &:active {
+    color: $link-font-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-bottom: 1px dotted $link-font-color;
+  }
+}
+
+header {
+  nav.navbar.navbar-default {
+    background-color: $light-bg-color;
+    border-color: $light-bg-color;
+    margin: 20px 0;
+
+    a.navbar-brand {
+      padding: 5px 0 5px 5px;
+
+      img {
+        height: 40px;
+      }
+    }
+
+    .navbar-nav>li {
+      &>a {
+        color: $dark-font-color;
+        font-size: 1.2em;
+        font-weight: $normal-font-weight;
+        transition: background-color 0.3s ease-in;
+
+        &.apply {
+          background-color: darken($primary-color, 5%);
+          border-radius: 10px;
+          color: $light-font-color;
+          font-weight: $normal-font-weight;
+          margin: 5px 0 0 1em;
+          padding: 10px 15px;
+          text-align: center;
+
+          &:hover {
+            background-color: $primary-color;
+          }
+        }
+      }
+
+      &.open>a, &>a:hover, &>a:active, &>a:focus {
+        background-color: $dark-font-color;
+        color: $light-font-color;
+      }
+
+      .dropdown-menu {
+        background-color: $dark-font-color;
+        border-width: 0px;
+
+        &>li>a {
+          color: $light-font-color;
+          font-weight: $normal-font-weight;
+          background-color: $dark-font-color;
+          transition: background-color 0.3s ease-in;
+          font-size: 1.1em;
+          padding: 0.7em 1.5em;
+
+          &:hover {
+            background-color: lighten($dark-font-color, 5%);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+footer {
+  background-color: $dark-font-color;
+  color: $light-font-color;
+  padding: 2rem 0;
+  text-align: left;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: $normal-font-weight;
+    color: $light-font-color;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: $light-font-weight;
+    color: $light-font-color;
+  }
+
+  nav {
+    a {
+      font-size: 1.5rem;
+      font-weight: $light-font-weight;
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.5em 0;
+      @include animate(all);
+
+      &, &:hover, &:visited, &:active, &:focus {
+        color: $darker-light-font-color;
+        text-decoration: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        color: $light-font-color;
+        padding-left: 1em;
+      }
+    }
+
+    &.social-links {
+      margin-bottom: 2em;
+
+      a {
+        font-size: 1.8em;
+        display: inline-block;
+        border: none;
+        padding: 0 0.2em;
+
+        &:hover {
+          padding: 0 0.2em;
+        }
+      }
+    }
+  }
+
+  .social-container {
+    text-align: center;
+
+    .copyright {
+      font-weight: $light-font-weight;
+      color: $darker-light-font-color;
+      margin-top: 1em;
+    }
+  }
+
+}
+
+.fullscreen {
+  height: 100vh;
+  @include full-width;
+}
+
+.brand_name {
+  white-space: nowrap;
+}

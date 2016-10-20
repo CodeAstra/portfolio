@@ -1,0 +1,76 @@
+@mixin main-font {
+  font-family: $main-font;
+  font-weight: 400;
+}
+
+@mixin thin-font {
+  font-family: $main-font;
+  font-weight: 300;
+}
+
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin flat-box-shadow {
+  box-shadow: 0px 10px 30px 0px $dark-font-color;
+  position: relative;
+  overflow: auto;
+}
+
+@mixin full-width {
+  width: 100vw;
+  max-width: 100%;
+}
+
+@mixin decorated-heading-container($heading-bg-color, $heading-font-color) {
+  position: relative;
+
+  &::before {
+    content: '';
+    border-top: 1px solid $heading-font-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+  }
+
+  h2 {
+    font-weight: $light-font-weight;
+    color: $heading-font-color;
+    display: inline-block;
+    margin: 0;
+    background-color: $heading-bg-color;
+    position: relative;
+    padding: 0 1em;
+
+    @media (min-width: 768px) {
+      font-size: 3em;
+    }
+  }
+}
+
+@mixin animate($property-to-animate, $animation-time: 0.3s, $animation-effect: ease-in) {
+  transition: $property-to-animate $animation-time $animation-effect;
+}
+
+@mixin rounded-large-button($link-font-color, $link-bg-color, $link-font-size) {
+  display: block;
+  margin: 0 auto;
+  padding: 0.15*$link-font-size 0 0.25*$link-font-size;
+  text-align: center;
+  font-size: $link-font-size;
+  font-weight: $light-font-weight;
+  color: $link-font-color;
+  background-color: transparent;
+  border: 1px solid $link-font-color;
+  border-radius: 0.2 * $link-font-size;
+  @include animate(background-color);
+
+  &:hover {
+    background-color: $link-bg-color;
+    text-decoration: none;
+  }
+}

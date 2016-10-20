@@ -1,0 +1,93 @@
+#four-oh-four {
+  color: $light-font-color;
+  text-align: center;
+
+  #mayday-container {
+    background: url('../images/bg/404.jpg') $dark-bg-color;
+    background-size: cover;
+    background-position: bottom center;
+    padding: 10vh 0 2em;
+  }
+
+  h1 {
+    font-size: 9vw;
+    font-weight:$light-font-weight;
+    margin-bottom: 0.8em;
+
+    @media (min-width: 768px)  {
+      font-size: 7vw;
+    }
+  }
+
+  h2 {
+    font-size: 8vw;
+    font-weight:$light-font-weight;
+    line-height: 1.5em;
+
+    @media (min-width: 768px)  {
+      font-size: 6vw;
+    }
+  }
+
+  p {
+    font-size: 1.5em;
+    font-weight: $light-font-color;
+    padding: 0 15px;
+  }
+
+  p.reasons {
+    margin: 3em 0 2em;
+  }
+
+  dl {
+    dt {
+      text-transform: uppercase;
+      font-size: 1.2em;
+      font-weight: $normal-font-weight;
+    }
+
+    dd {
+      font-size: 1.6em;
+      font-weight: $light-font-weight;
+      margin-bottom: 2em;
+    }
+  }
+
+  a.home-page {
+    @include rounded-large-button($light-font-color, rgba(255, 255, 255, 0.15), 2em);
+
+    width: 12em;
+    margin: 1em auto;
+  }
+
+  p.or {
+    text-transform: uppercase;
+    font-size: 1.6em;
+  }
+
+  #brain-teaser {
+    background-color: #404;
+    color: $light-font-color;
+
+    p {
+      padding: 4em 2em;
+      font-weight: $light-font-weight;
+      font-size: 2em;
+      position: relative;
+
+      i {
+        position: absolute;
+        opacity: 0.1;
+        font-size: 12em;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: $normal-font-weight;
+      }
+    }
+  }
+}

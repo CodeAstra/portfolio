@@ -14,7 +14,7 @@ exclude: [node_modules, gulpfile.js]
 markdown: kramdown
 
 # Custom Tags
-app_name_tag: '<span class="brand_name">Code Astra</span>'
+app_name_tag: '<span class="brand_name">Code Astra Labs</span>'
 
 gems:
   - jekyll-coffeescript
