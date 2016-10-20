@@ -1,2 +1,32 @@
 #home {
+  #land {
+    .jumbotron {
+      background-color: transparent;
+
+      h1 {
+        text-transform: uppercase;
+
+        em {
+          font-style: normal;
+          color: $primary-color;
+        }
+      }
+
+      p {
+        color: $dark-font-color;
+        font-weight: $normal-font-weight;
+        margin: 2em 0 4em;
+      }
+
+      a.portfolio-trigger {
+        color: $primary-color;
+
+        i {
+          color: $primary-color;
+          margin-left: 0.7em;
+          line-height: 1.4em;
+        }
+      }
+    }
+  }
 }

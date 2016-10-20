@@ -1,23 +1,17 @@
 $main-font: 'Lato', sans-serif;
-$thin-font: 'Lato', sans-serif;
-$primary-color: #1abc9c;
-$possible-primary-color: #5acbad;
-$darker-primary-color: #008080;
-$secondary-color: #34495e;
-$possible-secondary: #3EA0E4;
-$special-color-1: #F5AB35; // Yellow
-$special-color-2: #663399; // Purple
-$special-color-3: #C0392B; // Red
-$special-color-4: #3498DB; // Blue
-$special-color-5: #049372; // Green
-$dark-font-color: #454753;
-$lighter-dark-font-color: #9396a9;
-$light-font-color: #fff;
-$darker-light-font-color: #959bae;
-$light-bg-color: #fff;
-$darker-light-bg-color: #e8ebf2;
-$dark-bg-color: #2b2f3e;
-$lighter-dark-bg-color: #747d93;
+
+$primary-color: #bada55;
+$dark-color: #555;
+$darker-dark-color: #424143;
+$lighter-dark-color: #9396a9;
+$light-color: #fff;
+$darker-light-color: #e8e8e8;
+
+$dark-font-color: $dark-color;
+$lighter-dark-font-color: $lighter-dark-color;
+$light-font-color: $light-color;
+$light-bg-color: $light-color;
+$dark-bg-color: $dark-color;
 
 $link-font-color: $primary-color;
 

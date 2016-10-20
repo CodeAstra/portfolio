@@ -1,11 +1,6 @@
 @mixin main-font {
   font-family: $main-font;
-  font-weight: 400;
-}
-
-@mixin thin-font {
-  font-family: $main-font;
-  font-weight: 300;
+  font-weight: $normal-font-weight;
 }
 
 @mixin vertical-center {

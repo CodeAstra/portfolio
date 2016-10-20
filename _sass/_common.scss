@@ -8,7 +8,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include thin-font;
+  font-weight: $normal-font-weight;
 }
 
 main p a, main li a {
@@ -46,7 +46,7 @@ header {
         transition: background-color 0.3s ease-in;
 
         &.apply {
-          background-color: darken($primary-color, 5%);
+          background-color: $primary-color;
           border-radius: 10px;
           color: $light-font-color;
           font-weight: $normal-font-weight;
@@ -55,7 +55,7 @@ header {
           text-align: center;
 
           &:hover {
-            background-color: $primary-color;
+            background-color: darken($primary-color, 5%);
           }
         }
       }
@@ -88,7 +88,7 @@ header {
 }
 
 footer {
-  background-color: $dark-font-color;
+  background-color: $dark-bg-color;
   color: $light-font-color;
   padding: 2rem 0;
   text-align: left;
@@ -117,7 +117,7 @@ footer {
       @include animate(all);
 
       &, &:hover, &:visited, &:active, &:focus {
-        color: $darker-light-font-color;
+        color: $darker-light-color;
         text-decoration: none;
       }
 
@@ -152,7 +152,7 @@ footer {
 
     .copyright {
       font-weight: $light-font-weight;
-      color: $darker-light-font-color;
+      color: $darker-light-color;
       margin-top: 1em;
     }
   }
@@ -166,4 +166,17 @@ footer {
 
 .brand_name {
   white-space: nowrap;
+}
+
+.btn-dark {
+  background-color: $dark-font-color;
+
+  &, &:hover, &:active, &:visited, &:focus {
+    color: $light-font-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $darker-dark-color;
+  }
 }
