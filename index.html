@@ -7,27 +7,25 @@ image: /images/og/Code-Astra-Logo.jpg
   <div id="land" class="text-center">
     <div class="jumbotron">
       <div class="container">
-        <div class="row">
-          <h1>
-            Extreme<br>
-            <em>Web</em> &amp; <em>Hybrid Mobile</em> App<br>
-            Development
-          </h1>
-          <p>We help you transform your next-generation idea to product.</p>
-          <div>
-            <a class="btn btn-dark btn-lg portfolio-trigger" href="#" role="button">
-              Checkout our Portfolio
-              <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            </a>
-          </div>
+        <h1>
+          Extreme<br>
+          <em>Web</em> &amp; <em>Hybrid Mobile</em> App<br>
+          Development
+        </h1>
+        <p>We help you transform your next-generation idea to product.</p>
+        <div>
+          <a class="btn btn-dark btn-lg portfolio-trigger" href="#" role="button">
+            Checkout our Portfolio
+            <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
 
   <div id="we-do" class="text-center">
-    <h2>What We Do?</h2>
     <div class="container">
+      <h2>What We Do?</h2>
       <div class="row">
         <div class="col-md-4">
           <h3>Web &amp; Hybrid Mobile App Development</h3>
@@ -59,6 +57,28 @@ image: /images/og/Code-Astra-Logo.jpg
             <i class="fa fa-chevron-circle-right"></i>
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="expertise" class="text-center">
+    <div class="container">
+      <h2>Our Expertise</h2>
+      <p>
+        We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
+      </p>
+      <div class="row">
+        {% for skill in site.data.skills %}
+          <div class="col-md-2 col-sm-3 col-xs-4">
+            {{skill.name}}
+          </div>
+        {% endfor %}
+      </div>
+      <div>
+        <a href="">
+          Checkout our Services
+          <i class="fa fa-chevron-circle-right"></i>
+        </a>
       </div>
     </div>
   </div>
