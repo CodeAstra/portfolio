@@ -1,14 +1,14 @@
 [
-  {name: "HTML5"},
-  {name: "CSS3"},
-  {name: "HTML5"},
-  {name: "CSS3"},
-  {name: "HTML5"},
-  {name: "CSS3"},
-  {name: "HTML5"},
-  {name: "CSS3"},
-  {name: "HTML5"},
-  {name: "CSS3"},
-  {name: "HTML5"},
-  {name: "CSS3"}
+  {"name": "HTML 5",             "pic": "html.png"},
+  {"name": "CSS 3",              "pic": "css.png"},
+  {"name": "Interaction Design", "pic": "ui-ux.png"},
+  {"name": "JavaScript",         "pic": "js.jpg"},
+  {"name": "TypeScript",         "pic": "ts.png"},
+  {"name": "Angular 2",          "pic": "angular2.png"},
+  {"name": "React",              "pic": "react.png"},
+  {"name": "NodeJS",             "pic": "nodejs.png"},
+  {"name": "Ruby",               "pic": "ruby.png"},
+  {"name": "Ruby on Rails",      "pic": "rails.png"},
+  {"name": "Ionic 2",            "pic": "ionic.png"},
+  {"name": "React Native",       "pic": "react-native.png"}
 ]

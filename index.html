@@ -4,7 +4,7 @@ title: Web and Hybrid Mobile App Development and Consulting
 image: /images/og/Code-Astra-Logo.jpg
 ---
 <div id="home">
-  <div id="land" class="text-center">
+  <section id="land" class="text-center">
     <div class="jumbotron">
       <div class="container">
         <h1>
@@ -14,16 +14,16 @@ image: /images/og/Code-Astra-Logo.jpg
         </h1>
         <p>We help you transform your next-generation idea to product.</p>
         <div>
-          <a class="btn btn-dark btn-lg portfolio-trigger" href="#" role="button">
+          <a class="btn btn-dark btn-lg call-to-action" href="#" role="button">
             Checkout our Portfolio
             <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="we-do" class="text-center">
+  <section id="we-do" class="text-center">
     <div class="container">
       <h2>What We Do?</h2>
       <div class="row">
@@ -59,33 +59,34 @@ image: /images/og/Code-Astra-Logo.jpg
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="expertise" class="text-center">
+  <section id="expertise" class="text-center">
     <div class="container">
       <h2>Our Expertise</h2>
       <p>
         We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
       </p>
-      <div class="row">
+      <div class="row skills">
         {% for skill in site.data.skills %}
-          <div class="col-md-2 col-sm-3 col-xs-4">
-            {{skill.name}}
+          <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
+            <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
+            <p>{{skill.name}}</p>
           </div>
         {% endfor %}
       </div>
       <div>
-        <a href="">
+        <a href="" class="btn btn-dark btn-lg call-to-action">
           Checkout our Services
           <i class="fa fa-chevron-circle-right"></i>
         </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="clients"></div>
+  <section id="clients"></section>
 
-  <div id="testimonials"></div>
+  <section id="testimonials"></section>
 
-  <div id="team"></div>
+  <section id="team"></section>
 </div>
