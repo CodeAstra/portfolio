@@ -16,7 +16,17 @@ h1, h2 {
 }
 
 h2 {
-  font-weight: $bold-font-weight;
+  font-weight: $normal-font-weight;
+  font-size: 3.6rem;
+  margin: 1em 0;
+
+  @media (min-width: 760px) {
+    font-size: 6rem;
+  }
+}
+
+p, ul {
+  font-size: 1.5rem;
 }
 
 main p a, main li a {
@@ -51,47 +61,14 @@ header {
         color: $dark-font-color;
         font-size: 1.2em;
         font-weight: $normal-font-weight;
-        transition: background-color 0.3s ease-in;
-
-        &.apply {
-          background-color: $primary-color;
-          border-radius: 10px;
-          color: $light-font-color;
-          font-weight: $normal-font-weight;
-          margin: 5px 0 0 1em;
-          padding: 10px 15px;
-          text-align: center;
-
-          &:hover {
-            background-color: darken($primary-color, 5%);
-          }
-        }
+        transition: all 0.3s ease-in;
       }
 
       &.open>a, &>a:hover, &>a:active, &>a:focus {
         background-color: $dark-font-color;
-        color: $light-font-color;
-      }
-
-      .dropdown-menu {
-        background-color: $dark-font-color;
-        border-width: 0px;
-
-        &>li>a {
-          color: $light-font-color;
-          font-weight: $normal-font-weight;
-          background-color: $dark-font-color;
-          transition: background-color 0.3s ease-in;
-          font-size: 1.1em;
-          padding: 0.7em 1.5em;
-
-          &:hover {
-            background-color: lighten($dark-font-color, 5%);
-          }
-        }
+        color: $primary-color;
       }
     }
-
   }
 }
 
@@ -199,4 +176,8 @@ a.call-to-action {
     margin-left: 0.7em;
     line-height: 1.4em;
   }
+}
+
+.call-to-action-container {
+  margin-top: 4rem;
 }
