@@ -1,31 +1,6 @@
-#home {
-  section {
-    padding: 5vh 0;
-  }
-
-  #land {
-    background-image: url('../images/land/land-bg.jpg');
-    background-size: cover;
-    background-position: bottom right;
-
-    .jumbotron {
-      background-color: transparent;
-
-      h1 {
-        text-transform: uppercase;
-
-        em {
-          font-style: normal;
-          color: $primary-color;
-        }
-      }
-
-      p {
-        color: $dark-font-color;
-        font-weight: $normal-font-weight;
-        margin: 2em 0 4em;
-      }
-    }
+#about {
+  .page-title-container {
+    background-image: url('/images/bg/about.jpg');
   }
 
   #we-do {
@@ -61,6 +36,40 @@
 
       p {
         height: 5em;
+      }
+    }
+  }
+
+  #expertise {
+    .skills {
+      margin: 3em 0;
+    }
+
+    .skill {
+      background-color: $light-color;
+      padding: 25px 15px;
+      @include animate(background-color);
+
+      img {
+        height: 100px;
+        @include animate(transform);
+      }
+
+      p {
+        margin-top: 1em;
+        @include animate(transform);
+      }
+
+      &:hover {
+        background-color: $darker-light-color;
+
+        img {
+          transform: scale(0.8);
+        }
+
+        p {
+          transform: scale(1.2);
+        }
       }
     }
   }
