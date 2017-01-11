@@ -1,0 +1,22 @@
+#team {
+  .page-title-container {
+    background-image: url('/images/bg/about.jpg');
+  }
+
+  #experts {
+    .expert {
+      img {
+        border-radius: 50%;
+        filter: sepia(1);
+        transition: filter 0.3s ease-in;
+        margin: 0 auto;
+        @include animate(all);
+
+        &:hover {
+          filter: none;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
