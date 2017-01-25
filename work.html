@@ -1,0 +1,53 @@
+---
+layout: default
+title: Our Extreme Work
+image: /images/og/Code-Astra-Logo.jpg
+permalink: /work/
+---
+
+<div id="work">
+  <section class="page-title-container bg-top-focus text-center">
+    <div class="jumbotron">
+      <div class="container">
+        <h1>
+          our Extreme Work
+        </h1>
+        <p>We help you transform your next-generation idea to product.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--
+  SSAT Excellence
+  Vision
+  Colletive Wisdom
+  Good Seeds
+  Live Polls
+  BMC
+  Pictionary
+  Wolf Game
+  Resource Manager
+  Track Bus
+  Hour Glass
+  -->
+  <section id="projects" class="container">
+    {% for project in site.data.projects %}
+      <article class="project">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="preview-container text-right"><img src="http://placehold.it/320x180?text=Front" alt="" class="preview front"><img src="" alt="" class="preview back"></div>
+            <!-- <div class="preview-container"><img src="{{site.baseurl}}/images/projects/{{project.pic}}" alt="" class="preview front"><img src="" alt="" class="preview back"></div> -->
+          </div>
+          <div class="col-md-6">
+            <div class="details">
+              <h2>{{project.title}}</h2>
+              <p class="description">{{project.description}}</p>
+              <a href="" class="btn btn-outline">Demo</a>
+              <a href="" class="btn btn-outline">Code</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </section>
+</div>

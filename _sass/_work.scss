@@ -1,0 +1,32 @@
+#work {
+  .page-title-container {
+    background-image: url('/images/bg/about.jpg');
+  }
+
+  #projects {
+    .project {
+      background-color: $darker-light-color;
+      margin: 8rem 0;
+      padding: 12rem 2rem;
+
+      .details {
+        h2 {
+          font-size: 4rem;
+          margin: 0 0 2rem;
+        }
+
+        p {
+          font-size: 2rem;
+        }
+
+        a {
+          width: 6em;
+
+          &:last-child {
+            margin-left: 1em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -203,3 +203,20 @@ a.call-to-action {
 .call-to-action-container {
   margin-top: 4rem;
 }
+
+.btn-outline {
+  border: 1px solid $dark-font-color;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  @include animate(background-color);
+
+  &, &:hover {
+    color: $dark-font-color;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
