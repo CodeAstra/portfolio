@@ -69,3 +69,7 @@
     text-decoration: none;
   }
 }
+
+@mixin gradient-bg($opacity: 0.95) {
+  background: linear-gradient(135deg, rgba($dark-bg-color, $opacity), rgba(mix($primary-color, $dark-bg-color, 25%), $opacity), rgba(mix($primary-color, $dark-bg-color, 40%), $opacity), rgba(mix($primary-color, $dark-bg-color, 20%), $opacity));
+}

@@ -16,5 +16,10 @@
       clearTimeout(EqualHeightMaintainer.resizer) if EqualHeightMaintainer.resizer
       EqualHeightMaintainer.resizer = setTimeout((-> EqualHeightMaintainer.equateHeight()), 500)
 
+@affixHeader = ->
+  $('header nav').affix
+    offset:
+      top: 100
 $ ->
   EqualHeightMaintainer.handleResize()
+  affixHeader()
