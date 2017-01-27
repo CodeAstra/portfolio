@@ -3,126 +3,124 @@ layout: default
 title: Web and Hybrid Mobile App Development and Consulting
 image: /images/og/Code-Astra-Logo.jpg
 ---
-<div id="home">
-  <section id="land" class="page-title-container bg-bottom-right-focus text-center">
-    <div class="jumbotron">
-      <div class="container">
-        <h1>
-          Extreme<br>
-          <em>Web</em> &amp; <em>Mobile</em> App<br>
-          Development
-        </h1>
-        <p>We help you transform your next-generation idea to product.</p>
-        <div class="action-container">
-          <a class="btn btn-dark btn-lg  btn-outline" href="#" role="button">
-            Checkout our Portfolio
-            <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="we-do" class="text-center">
+<section id="land" class="page-title-container bg-bottom-right-focus text-center">
+  <div class="jumbotron">
     <div class="container">
-      <h2>What We Do?</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="well gradient-bg">
-            <i class="fa fa-globe"></i>
-            <h3>
-              Web
-              <br>
-              Application
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build robust, scalable, and maintainable web applications.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well gradient-bg">
-            <i class="fa fa-magic"></i>
-            <h3>
-              Hybrid
-              <br>
-              Mobile App
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build extreme, responsive and performant hybrid mobile apps.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well gradient-bg">
-            <i class="fa fa-mobile"></i>
-            <h3>
-              Mobile
-              <br>
-              Application
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build robust, usable, and slick mobile applications.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="call-to-action-container">
-        <a class="btn btn-dark btn-lg call-to-action" href="#" role="button">
-          Know more about us
+      <h1>
+        Extreme<br>
+        <em>Web</em> &amp; <em>Mobile</em> App<br>
+        Development
+      </h1>
+      <p>We help you transform your next-generation idea to product.</p>
+      <div class="action-container">
+        <a class="btn btn-lg  btn-outline" href="{{site.baseurl}}/work/" role="button">
+          Checkout our Portfolio
           <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="we-do" class="text-center">
+  <div class="container">
+    <h2>What We Do?</h2>
+    <div class="row gradient-wells summary-wells">
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-globe"></i>
+          <h3>
+            Web
+            <br>
+            Application
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build robust, scalable, and maintainable web applications.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-magic"></i>
+          <h3>
+            Hybrid
+            <br>
+            Mobile App
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build extreme, responsive and performant hybrid mobile apps.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-mobile"></i>
+          <h3>
+            Mobile
+            <br>
+            Application
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build robust, usable, and slick mobile applications.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="call-to-action-container">
+      <a class="btn btn-dark btn-lg call-to-action" href="#" role="button">
+        Know more about us
+        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
 <!--
-  <section id="expertise" class="text-center">
-    <div class="container">
-      <h2>Our Expertise</h2>
-      <p>
-        We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
-      </p>
-      <div class="row skills">
-        {% for skill in site.data.skills %}
-          <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
-            <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
-            <p>{{skill.name}}</p>
-          </div>
-        {% endfor %}
-      </div>
-      <div>
-        <a href="" class="btn btn-dark btn-lg call-to-action">
-          Checkout our Services
-          <i class="fa fa-chevron-circle-right"></i>
-        </a>
-      </div>
+<section id="expertise" class="text-center">
+  <div class="container">
+    <h2>Our Expertise</h2>
+    <p>
+      We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
+    </p>
+    <div class="row skills">
+      {% for skill in site.data.skills %}
+        <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
+          <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
+          <p>{{skill.name}}</p>
+        </div>
+      {% endfor %}
     </div>
-  </section>
+    <div>
+      <a href="" class="btn btn-dark btn-lg call-to-action">
+        Checkout our Services
+        <i class="fa fa-chevron-circle-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
 
-  <section id="clients"></section>
+<section id="clients"></section>
 
-  <section id="testimonials"></section>
+<section id="testimonials"></section>
 -->
 
-  <section id="team" class="text-center">
-    <div class="container">
-      <h2>Our Team</h2>
-      <p>
-        Creativity, Innovation, Dynamism, Knoweldge, Talent, Dedication, Confidence and Extreme.
-      </p>
-      <div class="call-to-action-container">
-        <a class="btn btn-dark btn-lg call-to-action" href="#" role="button">
-          Meet the Team
-          <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-        </a>
-      </div>
+<section id="team" class="text-center">
+  <div class="container">
+    <h2>Our Team</h2>
+    <p>
+      Creativity, Innovation, Dynamism, Knoweldge, Talent, Dedication, Confidence and Extreme.
+    </p>
+    <div class="call-to-action-container">
+      <a class="btn btn-dark btn-lg call-to-action" href="#" role="button">
+        Meet the Team
+        <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+      </a>
     </div>
-  </section>
-</div>
+  </div>
+</section>

@@ -70,6 +70,10 @@
   }
 }
 
-@mixin gradient-bg($opacity: 0.95) {
-  background: linear-gradient(135deg, rgba($dark-bg-color, $opacity), rgba(mix($primary-color, $dark-bg-color, 25%), $opacity), rgba(mix($primary-color, $dark-bg-color, 40%), $opacity), rgba(mix($primary-color, $dark-bg-color, 20%), $opacity));
+@mixin gradient-bg($major-color: $dark-bg-color, $minor-color: $primary-color, $opacity: 0.95, $first-break: 10%, $second-break: 60%) {
+  background: linear-gradient(135deg, rgba($major-color, $opacity), rgba(mix($minor-color, $major-color, 25%), $opacity) $first-break, rgba(mix($minor-color, $major-color, 90%), $opacity) $second-break, rgba(mix($minor-color, $major-color, 20%), $opacity));
+}
+
+@mixin gray-gradient-bg {
+  @include gradient-bg($dark-bg-color, $lighter-dark-color, 1, 30%, 80%);
 }

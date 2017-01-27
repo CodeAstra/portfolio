@@ -49,14 +49,30 @@ header {
     padding: 20px 0;
     margin-bottom: 0;
     border-radius: 0;
-    @include animate(background-color, 1s);
+
+    .gradient-bg {
+      opacity: 0;
+      @include animate(opacity, 1s);
+      @include gray-gradient-bg;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     &.affix-top {
-      background-color: transparent;
+
+      .gradient-bg {
+        opacity: 0;
+      }
     }
 
     &.affix {
-      background-color: $dark-bg-color;
+      .gradient-bg {
+        opacity: 1;
+      }
     }
 
     a.navbar-brand {
@@ -93,7 +109,7 @@ header {
 }
 
 footer {
-  background-color: $dark-bg-color;
+  @include gray-gradient-bg;
   color: $light-font-color;
   padding: 2rem 0;
   text-align: left;
@@ -175,7 +191,6 @@ section {
 
   .jumbotron {
     color: $light-font-color;
-    @include gradient-bg;
     padding: calc(12rem + 60px) 0 12rem;
 
     h1 {
@@ -217,7 +232,8 @@ section {
 }
 
 .btn-dark {
-  background-color: $dark-font-color;
+  @include gray-gradient-bg;
+  @include animate(color);
 
   &, &:hover, &:active, &:visited, &:focus {
     color: $light-font-color;
@@ -225,32 +241,89 @@ section {
   }
 
   &:hover {
-    background-color: $darker-dark-color;
+    color: $primary-color;
   }
 }
 
-.btn-outline {
-  border: 1px solid $light-font-color;
+.btn-outline, .btn-dark-outline {
   border-radius: 4px;
   background-color: transparent;
   @include animate(background-color);
 
   &, &:hover {
-    color: $light-font-color;
     text-decoration: none;
   }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
   i {
-    color: $light-font-color;
     margin-left: 0.7em;
     line-height: 1.4em;
   }
 }
 
-.gradient-bg {
-  @include gradient-bg(1);
+.btn-outline {
+  border: 1px solid $light-font-color;
+
+  &, &:hover {
+    color: $light-font-color;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  i {
+    color: $light-font-color;
+  }
+}
+
+.btn-dark-outline {
+  border: 1px solid $dark-font-color;
+
+  &, &:hover {
+    color: $dark-font-color;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  i {
+    color: $dark-font-color;
+  }
+}
+
+.summary-wells {
+  .well {
+    background-color: $dark-bg-color;
+    border-color: $dark-bg-color;
+    color: $light-font-color;
+    margin-bottom: 2em;
+
+    i.fa {
+      font-size: 8rem;
+      line-height: 8rem;
+      margin-top: 3rem;
+
+      &.fa-magic {
+        font-size: 6rem;
+      }
+    }
+
+    h3 {
+      height: 5em;
+      line-height: 1.4em;
+      font-weight: $normal-font-weight;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      em {
+        font-weight: $light-font-weight;
+        font-style: italic;
+      }
+    }
+
+    p {
+      height: 5em;
+    }
+  }
 }

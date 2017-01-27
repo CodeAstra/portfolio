@@ -1,43 +1,17 @@
-#about {
+$about-major-color: #795548;
+$about-minor-color: #009688;
+
+#about-page {
   .page-title-container {
     background-image: url('/images/bg/about.jpg');
+
+    .jumbotron {
+      @include gradient-bg($about-major-color, $about-minor-color, 0.9);
+    }
   }
 
-  #we-do {
-    .well {
-      background-color: $dark-bg-color;
-      border-color: $dark-bg-color;
-      color: $light-font-color;
-      margin-bottom: 2em;
-
-      i.fa {
-        font-size: 8rem;
-        line-height: 8rem;
-        margin-top: 3rem;
-
-        &.fa-magic {
-          font-size: 6rem;
-        }
-      }
-
-      h3 {
-        height: 5em;
-        line-height: 1.4em;
-        font-weight: $normal-font-weight;
-        text-transform: uppercase;
-        white-space: nowrap;
-
-        em {
-          font-weight: $light-font-weight;
-          font-style: italic;
-          color: $lighter-dark-font-color;
-        }
-      }
-
-      p {
-        height: 5em;
-      }
-    }
+  .gradient-wells .well {
+    @include gradient-bg($about-major-color, $about-minor-color);
   }
 
   #expertise {

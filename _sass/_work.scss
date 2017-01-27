@@ -1,6 +1,17 @@
-#work {
+$work-major-color: #2196F3;
+$work-minor-color: #8BC34A;
+
+#work-page {
   .page-title-container {
     background-image: url('/images/bg/about.jpg');
+
+    .jumbotron {
+      @include gradient-bg($work-major-color, $work-minor-color, 0.9);
+    }
+  }
+
+  .project {
+    @include gradient-bg($work-major-color, $work-minor-color, 0.3);
   }
 
   #projects {

@@ -4,85 +4,83 @@ title: About Code Astra Labs
 image: /images/og/Code-Astra-Logo.jpg
 permalink: /about/
 ---
-<div id="about">
-  <section class="page-title-container bg-top-focus text-center">
-    <div class="jumbotron">
-      <div class="container">
-        <h1>
-          About Code Astra Labs
-        </h1>
-        <p>We help you transform your next-generation idea to product.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="we-do" class="text-center">
+<section class="page-title-container bg-top-focus text-center">
+  <div class="jumbotron">
     <div class="container">
-      <h2>What We Do?</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="well">
-            <i class="fa fa-globe"></i>
-            <h3>
-              Web
-              <br>
-              Application
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build robust, scalable, and maintainable web applications.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <i class="fa fa-magic"></i>
-            <h3>
-              Hybrid
-              <br>
-              Mobile App
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build extreme, responsive and performant hybrid mobile apps.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <i class="fa fa-mobile"></i>
-            <h3>
-              Mobile
-              <br>
-              Application
-              <br>
-              <em>Development</em>
-            </h3>
-            <p>
-              We build robust, usable, and slick mobile applications.
-            </p>
-          </div>
-        </div>
-      </div>
+      <h1>
+        About Code Astra Labs
+      </h1>
+      <p>We help you transform your next-generation idea to product.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="expertise" class="text-center">
-    <div class="container">
-      <h2>Our Expertise</h2>
-      <p>
-        We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
-      </p>
-      <div class="row skills">
-        {% for skill in site.data.skills %}
-          <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
-            <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
-            <p>{{skill.name}}</p>
-          </div>
-        {% endfor %}
+<section id="we-do" class="text-center">
+  <div class="container">
+    <h2>What We Do?</h2>
+    <div class="row summary-wells gradient-wells">
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-globe"></i>
+          <h3>
+            Web
+            <br>
+            Application
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build robust, scalable, and maintainable web applications.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-magic"></i>
+          <h3>
+            Hybrid
+            <br>
+            Mobile App
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build extreme, responsive and performant hybrid mobile apps.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="well">
+          <i class="fa fa-mobile"></i>
+          <h3>
+            Mobile
+            <br>
+            Application
+            <br>
+            <em>Development</em>
+          </h3>
+          <p>
+            We build robust, usable, and slick mobile applications.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
+
+<section id="expertise" class="text-center">
+  <div class="container">
+    <h2>Our Expertise</h2>
+    <p>
+      We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
+    </p>
+    <div class="row skills">
+      {% for skill in site.data.skills %}
+        <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
+          <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
+          <p>{{skill.name}}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
