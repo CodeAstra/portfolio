@@ -164,25 +164,46 @@ footer {
 
 }
 
+section {
+  padding: 5vh 0;
+}
+
 .page-title-container {
   background-size: cover;
   background-position: 50% 50%;
+  padding: 0;
 
   .jumbotron {
-    background-color: rgba(255, 255, 255, 0.6);
-  }
+    color: $light-font-color;
+    @include gradient-bg;
+    padding: calc(12rem + 60px) 0 12rem;
 
-  h1, p {
-    color: $dark-font-color;
-  }
+    h1 {
+      text-transform: uppercase;
+      margin-top: 0;
 
-  p {
-    font-weight: 400;
-    margin: 2em 0;
+      em {
+        font-style: normal;
+        color: $primary-color;
+      }
+    }
+
+    p {
+      font-weight: $normal-font-weight;
+      margin: 2em 0 0;
+    }
+
+    .action-container {
+      margin-top: 8rem;
+    }
   }
 
   &.bg-top-focus {
     background-position: top center;
+  }
+
+  &.bg-bottom-right-focus {
+    background-position: bottom right;
   }
 }
 
@@ -206,10 +227,6 @@ footer {
   &:hover {
     background-color: $darker-dark-color;
   }
-}
-
-.call-to-action-container {
-  margin-top: 4rem;
 }
 
 .btn-outline {

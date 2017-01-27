@@ -1,33 +1,6 @@
 #home {
-  section {
-    padding: 5vh 0;
-  }
-
   #land {
     background-image: url('../images/land/land-bg.jpg');
-    background-size: cover;
-    background-position: bottom right;
-    padding: 0;
-
-    .jumbotron {
-      color: $light-font-color;
-      @include gradient-bg;
-      padding: 108px 0 48px;
-
-      h1 {
-        text-transform: uppercase;
-
-        em {
-          font-style: normal;
-          color: $primary-color;
-        }
-      }
-
-      p {
-        font-weight: $normal-font-weight;
-        margin: 2em 0 4em;
-      }
-    }
   }
 
   #we-do {

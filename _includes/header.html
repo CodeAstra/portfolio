@@ -17,10 +17,15 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class='active'><a href="{{site.baseurl}}/about/">About</a></li>
-          <li><a href="{{site.baseurl}}/work/">Work</a></li>
-          <li><a href="{{site.baseurl}}/team/">Team</a></li>
-          <li><a href="{{site.baseurl}}/contact/">Contact</a></li>
+          {% for node in site.data.menu %}
+            {% assign page_url = page.url | remove: 'index.html' %}
+            {% if node.link == page_url %}
+              {% assign activeClass = 'active' %}
+            {% else %}
+              {% assign activeClass = '' %}
+            {% endif %}
+            <li class="{{activeClass}}"><a href="{{site.baseurl}}{{node.link}}">{{node.title}}</a></li>
+          {% endfor %}
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
