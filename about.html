@@ -74,13 +74,87 @@ permalink: /about/
     <p>
       We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
     </p>
-    <div class="row skills">
-      {% for skill in site.data.skills %}
-        <div class="col-md-2 col-sm-3 col-xs-4 text-center skill">
-          <img src="{{site.baseurl}}/images/expertise/{{skill.pic}}" alt="{{skill.name}}">
-          <p>{{skill.name}}</p>
-        </div>
-      {% endfor %}
-    </div>
+    <svg id="skills-cloud" style="display: block; margin: 0 auto;"></svg>
   </div>
 </section>
+
+<script src="{{site.baseurl}}/js/d3.v3.min.js" charset="utf-8"></script>
+<script src="{{site.baseurl}}/js/d3.layout.cloud.js" charset="utf-8"></script>
+<script type="text/javascript">
+  var cloud = d3.layout.cloud;
+  var fill = d3.scale.category20();
+
+  var skills = [
+    {text: 'Ruby Rails',         size: 60},
+    {text: 'Angular',            size: 30},
+    {text: 'Ionic',              size: 30},
+    {text: 'React',              size: 30},
+    {text: 'React Native',       size: 30},
+    {text: 'Play Java',          size: 30},
+    {text: 'Android Native',     size: 30},
+    {text: 'iOS Native',         size: 30},
+    {text: 'DevOps',             size: 30},
+    {text: 'HTML5',              size: 20},
+    {text: 'CSS3',               size: 20},
+    {text: 'Interaction Design', size: 20},
+    {text: 'JavaScript',         size: 20},
+    {text: 'TypeScript',         size: 20},
+    {text: 'Node JS',            size: 20},
+    {text: 'Ruby',               size: 20},
+    {text: 'AWS',                size: 20},
+    {text: 'Azure',              size: 20},
+    {text: 'Redis',              size: 20},
+    {text: 'Neo4J',              size: 20},
+    {text: 'CouchDB',            size: 20},
+    {text: 'MongoDB',            size: 20},
+    {text: 'NoSQL',              size: 20},
+    {text: 'SQL',                size: 20},
+    {text: 'Firebase',           size: 20},
+    {text: 'BaaS',               size: 20},
+    {text: 'Elastic Search',     size: 20},
+    {text: 'Facebook API',       size: 20},
+    {text: 'Scss',               size: 20},
+    {text: 'Sass',               size: 20},
+    {text: 'CoffeeScript',       size: 20},
+    {text: 'SQL',                size: 20},
+    {text: 'RSpec',              size: 20},
+    {text: 'TDD',                size: 20},
+    {text: 'BDD',                size: 20},
+    {text: 'Git',                size: 20},
+  ];
+
+  var svgWidth = ~~(0.9 * $('#expertise .container').width());
+  var svgHeight = ~~(svgWidth *9 / 16);
+
+  var layout = cloud()
+    .size([svgWidth, svgHeight])
+    .words(skills)
+    .padding(8)
+    .rotate(function() { return (~~(Math.random() * 5) * 24) - 60; })
+    .spiral("rectangular")
+    .font("Impact")
+    .fontSize(function(d) { return d.size; })
+    .on("end", draw);
+
+  layout.start();
+
+  function draw(words) {
+    d3.select("#skills-cloud")
+      .attr("width", layout.size()[0])
+      .attr("height", layout.size()[1])
+      .append("g")
+      .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+      .selectAll("text")
+      .data(words)
+      .enter().append("text")
+      .style("font-size", function(d) { return d.size + "px"; })
+      .style("font-family", "Impact")
+      .style("fill", function(d, i) { return fill(i); })
+      .attr("text-anchor", "middle")
+      .transition()
+      .attr("transform", function(d) {
+        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+      })
+      .text(function(d) { return d.text; });
+}
+</script>
