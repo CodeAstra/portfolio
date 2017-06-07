@@ -6,11 +6,13 @@ $home-minor-color: #16a085;
     background-image: url('../images/land/land-bg.jpg');
 
     .jumbotron {
-      @include gradient-bg($home-major-color, $home-minor-color, 0.9);
+      // @include gradient-bg($home-major-color, $home-minor-color, 0.9);
+      @include animated-gradient-bg($home-major-color, $home-minor-color, 0.9);
     }
   }
 
   .gradient-wells .well {
-    @include gradient-bg($home-major-color, $home-minor-color);
+    // @include gradient-bg($home-major-color, $home-minor-color);
+    @include animated-gradient-bg($home-major-color, $home-minor-color);
   }
 }

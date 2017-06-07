@@ -1,17 +1,19 @@
-$about-major-color: #795548;
-$about-minor-color: #009688;
+$about-major-color: #9b59b6;
+$about-minor-color: #3498db;
 
 #about-page {
   .page-title-container {
     background-image: url('/images/bg/about.jpg');
 
     .jumbotron {
-      @include gradient-bg($about-major-color, $about-minor-color, 0.9);
+      // @include gradient-bg($about-major-color, $about-minor-color, 0.9);
+      @include animated-gradient-bg($about-major-color, $about-minor-color, 0.9);
     }
   }
 
   .gradient-wells .well {
-    @include gradient-bg($about-major-color, $about-minor-color);
+    // @include gradient-bg($about-major-color, $about-minor-color);
+    @include animated-gradient-bg($about-major-color, $about-minor-color);
   }
 
   #expertise {

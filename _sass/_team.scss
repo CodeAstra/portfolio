@@ -1,12 +1,12 @@
-$team-major-color: #03A9F4;
-$team-minor-color: #4CAF50;
+$team-major-color: #34495e;
+$team-minor-color: #8e44ad;
 
 #team-page {
   .page-title-container {
     background-image: url('/images/bg/about.jpg');
 
     .jumbotron {
-      @include gradient-bg($team-major-color, $team-minor-color, 0.9);
+      @include animated-gradient-bg($team-major-color, $team-minor-color, 0.9);
     }
   }
 

@@ -1,12 +1,12 @@
-$contact-major-color: #673AB7;
-$contact-minor-color: #009688;
+$contact-major-color: #d35400;
+$contact-minor-color: #f39c12;
 
 #contact-page {
   .page-title-container {
     background-image: url('/images/bg/about.jpg');
 
     .jumbotron {
-      @include gradient-bg($contact-major-color, $contact-minor-color, 0.9);
+      @include animated-gradient-bg($contact-major-color, $contact-minor-color, 0.9);
     }
   }
 }
