@@ -1,0 +1,21 @@
+$grid-float-breakpoint: 768px;
+$grid-float-breakpoint-max: $grid-float-breakpoint - 1px;
+
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: $light-color;
+  }
+
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    @include animated-gradient-bg($gradient-major-color, $gradient-minor-color, 1);
+  }
+
+  header nav.navbar.navbar-default .navbar-nav > li.active > a {
+    background-color: rgba($light-color, 0.3);
+    border-bottom: none;
+  }
+}
