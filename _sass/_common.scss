@@ -53,7 +53,7 @@ header {
     .gradient-bg {
       opacity: 0;
       @include animate(opacity, 1s);
-      @include gray-gradient-bg;
+      @include animated-gradient-bg($gradient-major-color, $gradient-minor-color, 1);
       position: absolute;
       z-index: -1;
       top: 0;

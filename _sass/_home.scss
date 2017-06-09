@@ -1,5 +1,5 @@
-$home-major-color: #2980b9;
-$home-minor-color: #16a085;
+$home-major-color: $gradient-major-color;
+$home-minor-color: $gradient-minor-color;
 
 #home-page {
   .page-title-container {

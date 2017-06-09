@@ -1,7 +1,7 @@
 // $team-major-color: #34495e;
 // $team-minor-color: #8e44ad;
-$team-major-color: #2980b9;
-$team-minor-color: #16a085;
+$team-major-color: $gradient-major-color;
+$team-minor-color: $gradient-minor-color;
 
 #team-page {
   .page-title-container {
