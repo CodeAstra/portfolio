@@ -15,4 +15,28 @@ $home-minor-color: $gradient-minor-color;
     // @include gradient-bg($home-major-color, $home-minor-color);
     @include animated-gradient-bg($home-major-color, $home-minor-color);
   }
+
+  #team {
+    padding: 15vh 0;
+    background-image: url('../images/land/home-team-bg.jpg');
+    background-size: cover;
+    background-position: 50% 20%;
+
+    h2 {
+      margin-top: 0;
+      color: $light-color;
+    }
+
+    .team-traits {
+      color: $light-color;
+      font-size: 3rem;
+    }
+
+    .team-summary {
+      color: $primary-color;
+      font-size: 3rem;
+      margin-bottom: 6rem;
+      font-style: italic;
+    }
+  }
 }
