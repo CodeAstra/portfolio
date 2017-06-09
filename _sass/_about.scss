@@ -19,6 +19,11 @@ $about-minor-color: $gradient-minor-color;
   }
 
   #expertise {
+    .expertise-summary {
+      font-size: 3rem;
+      font-style: italic;
+    }
+
     svg#skills-cloud {
       g {
         text {

@@ -15,6 +15,16 @@ permalink: /about/
   </div>
 </section>
 
+<section id="expertise" class="text-center">
+  <div class="container">
+    <h2>Our Expertise</h2>
+    <p class="expertise-summary">
+      We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
+    </p>
+    <svg id="skills-cloud" style="display: block; margin: 0 auto;"></svg>
+  </div>
+</section>
+
 <section id="we-do" class="text-center">
   <div class="container">
     <h2>What We Do?</h2>
@@ -65,16 +75,6 @@ permalink: /about/
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="expertise" class="text-center">
-  <div class="container">
-    <h2>Our Expertise</h2>
-    <p>
-      We build software that are not only visually appealing but also robust and scalable using the following technologies and platforms.
-    </p>
-    <svg id="skills-cloud" style="display: block; margin: 0 auto;"></svg>
   </div>
 </section>
 
@@ -132,7 +132,7 @@ permalink: /about/
     .padding(8)
     .rotate(function() { return (~~(Math.random() * 5) * 24) - 60; })
     .spiral("rectangular")
-    .font("Impact")
+    .font("Lato")
     .fontSize(function(d) { return d.size; })
     .on("end", draw);
 
@@ -148,7 +148,7 @@ permalink: /about/
       .data(words)
       .enter().append("text")
       .style("font-size", function(d) { return d.size + "px"; })
-      .style("font-family", "Impact")
+      .style("font-family", "Lato")
       .style("fill", function(d, i) { return fill(i); })
       .attr("text-anchor", "middle")
       .transition()
