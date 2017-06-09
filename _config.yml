@@ -1,10 +1,10 @@
 # Site settings
-title: "Code Astra Labs: Shaping The Future."
+title: "Code Astra: Extreme Web and Mobile App Development."
 # email: your-email@domain.com
-description: > # Code Astra Labs strives to build innovative products.
+description: > # Code Astra strives to build innovative products.
   Code Astra is known to deliver value to clients and customers.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://labs.codeastra.com" # the base hostname & protocol for your site
+url: "http://www.codeastra.com" # the base hostname & protocol for your site
 twitter_username: CodeAstra
 github_username:  CodeAstra
 repository: CodeAstra/labs
@@ -14,7 +14,7 @@ exclude: [node_modules, gulpfile.js]
 markdown: kramdown
 
 # Custom Tags
-app_name_tag: '<span class="brand_name">Code Astra Labs</span>'
+app_name_tag: '<span class="brand_name">Code Astra</span>'
 
 gems:
   - jekyll-coffeescript
