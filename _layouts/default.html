@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  {% assign page_identifier = page.url | remove: 'index.html' | remove: '/' %}
+  {% assign page_identifier = page.url | remove: 'index.html' | remove: '/' | split: '.' | first %}
   {% if page_identifier == '' %}
     {% assign page_identifier = 'home' %}
   {% endif %}
