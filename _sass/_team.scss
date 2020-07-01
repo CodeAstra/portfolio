@@ -5,7 +5,7 @@ $team-minor-color: $gradient-minor-color;
 
 #team-page {
   .page-title-container {
-    background-image: url('/images/bg/about.jpg');
+    background-image: url("/images/bg/about.jpg");
 
     .jumbotron {
       @include animated-gradient-bg($team-major-color, $team-minor-color, 0.9);
@@ -44,7 +44,21 @@ $team-minor-color: $gradient-minor-color;
       }
 
       .summary {
+        .apply-now {
+          margin-top: 1rem;
+          color: $dark-balanced-color;
+          border: 1px solid currentColor;
+          border-radius: 3px;
+          font-size: 1.6rem;
+          padding: 1rem 2rem;
+          display: inline-block;
+          background-color: rgba($dark-balanced-color, 0.04);
+          transition: 0.2s ease-in;
 
+          &:hover {
+            background-color: rgba($dark-balanced-color, 0.1);
+          }
+        }
       }
     }
   }

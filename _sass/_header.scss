@@ -1,0 +1,10 @@
+header nav.navbar.navbar-default .navbar-nav > li > a.btn-hiring {
+  background-color: rgba($light-color, 0.2);
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  margin-left: 1rem;
+
+  i.fa {
+    margin-right: 0.6rem;
+  }
+}
