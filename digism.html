@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DigiSM - Southern Railway Presentation</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/theme/white.css"
+    >
+
+    <style>
+        :root {
+            --r-background-color: #ffffff;
+            --r-main-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --r-main-font-size: 38px;
+            --r-main-color: #2c3e50;
+            --r-heading-color: #1a252f;
+            --r-heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --r-link-color: #3498db;
+            --r-link-color-hover: #2980b9;
+            --accent-color: #34495e;
+            --highlight-color: #e74c3c;
+        }
+
+        .reveal {
+            font-size: var(--r-main-font-size);
+        }
+
+        .reveal h1 {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: var(--r-heading-color);
+            text-transform: none;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--r-heading-color);
+            text-transform: none;
+            margin-bottom: 0.5em;
+        }
+
+        .reveal h3 {
+            font-size: 1.3em;
+            font-weight: 500;
+            color: var(--accent-color);
+            text-transform: none;
+            margin-bottom: 0.4em;
+        }
+
+        .reveal ul {
+            margin: 1em 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .reveal li {
+            margin: 0.5em 0;
+            line-height: 1.4;
+        }
+
+        .reveal strong {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .reveal em {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Title Slide */
+        .title-slide {
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+            color: #1a252f;
+        }
+
+        .title-slide .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 1.5em;
+        }
+
+        .title-slide .presenter {
+            margin-top: 2em;
+            font-size: 0.9em;
+        }
+
+        .title-slide .presenter-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.2em;
+        }
+
+        .title-slide .presenter-title {
+            color: #7f8c8d;
+            margin-bottom: 0.5em;
+        }
+
+        .title-slide .client {
+            margin-top: 1em;
+            font-size: 1.1em;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Section Headers */
+        .section-header {
+            background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+            color: white !important;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            color: white !important;
+            font-size: 2.5em;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+            align-items: start;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        /* Emphasis Box */
+        .emphasis-box {
+            background: #ecf0f1;
+            padding: 1em 1.5em;
+            border-left: 4px solid var(--accent-color);
+            margin: 1em 0;
+        }
+
+        /* Roadmap Styling */
+        .roadmap-phase {
+            background: #f8f9fa;
+            padding: 1.2em;
+            margin: 0.8em 0;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+
+        .roadmap-phase h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        /* Footer */
+        .slide-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 0.5em;
+            color: #95a5a6;
+        }
+
+        /* Geometric Background Pattern */
+        .reveal .slides section {
+            background-image:
+                linear-gradient(30deg, #f8f9fa 12%, transparent 12.5%, transparent 87%, #f8f9fa 87.5%, #f8f9fa),
+                linear-gradient(150deg, #f8f9fa 12%, transparent 12.5%, transparent 87%, #f8f9fa 87.5%, #f8f9fa),
+                linear-gradient(30deg, #f8f9fa 12%, transparent 12.5%, transparent 87%, #f8f9fa 87.5%, #f8f9fa),
+                linear-gradient(150deg, #f8f9fa 12%, transparent 12.5%, transparent 87%, #f8f9fa 87.5%, #f8f9fa);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+            background-color: #ffffff;
+        }
+
+        /* Override for section headers */
+        .section-header {
+            background-image: none !important;
+        }
+
+        /* Smaller text for dense slides */
+        .dense-content {
+            font-size: 0.85em;
+        }
+
+        .dense-content li {
+            margin: 0.3em 0;
+        }
+
+        /* Closing slide elements */
+        .closing-footer {
+            margin-top: 2em;
+        }
+
+        .closing-subtitle {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 1: Opening Slide -->
+        <section class="title-slide">
+          <h1>DigiSM</h1>
+
+          <p class="subtitle">
+            Digitization of Station Master Registers
+            <br>
+            A Safety-First, Role-Based Digital System for Southern Railway
+          </p>
+
+          <div class="presenter">
+            <div class="presenter-name">BV Satyaram</div>
+
+            <div class="presenter-title">
+              Founder & CEO, CodeAstra Software LLP
+            </div>
+
+            <div class="client">Southern Railway</div>
+          </div>
+        </section>
+
+        <!-- Slide 2: Executive Overview -->
+        <section>
+          <h2>Executive Overview</h2>
+
+          <ul>
+            <li class="fragment">
+              DigiSM transforms officially prescribed railway registers into a
+              reliable, compliant digital system
+            </li>
+
+            <li class="fragment">
+              Directly aligned with Southern Railway's safety and digitization
+              directives
+            </li>
+
+            <li class="fragment">
+              Built on principles of
+              <strong>safety, auditability, and role clarity</strong>
+            </li>
+
+            <li class="fragment">
+              Current deployment: <strong>9 registers operational</strong> with
+              proven stability
+            </li>
+
+            <li class="fragment">
+              Future roadmap: <strong>36 registers across 6 divisions</strong>
+              with controlled, phased rollout
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 3: About CodeAstra Software LLP -->
+        <section>
+          <h2>About CodeAstra Software LLP</h2>
+
+          <div class="two-column dense-content">
+            <div>
+              <h3>Engineering Excellence</h3>
+
+              <ul>
+                <li>Founded by <strong>IIT alumni</strong></li>
+                <li>Headquartered in <strong>Hyderabad</strong></li>
+
+                <li>
+                  Extensive experience supporting Silicon Valley startups from
+                  ideation to scale
+                </li>
+
+                <li>
+                  Proven track record as <strong>Virtual CTOs</strong> during
+                  early, high-risk stages
+                </li>
+
+                <li>
+                  Portfolio includes companies later
+                  <strong>acquired by global technology leaders</strong>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Our Commitment</h3>
+
+              <ul>
+                <li>
+                  <strong>Engineering discipline</strong> and system design
+                  rigor
+                </li>
+
+                <li>Reliability in production environments</li>
+                <li><strong>100+ engineers</strong> mentored and groomed</li>
+
+                <li>
+                  Comfortable with
+                  <strong>regulated, safety-critical systems</strong>
+                </li>
+
+                <li>
+                  Positioned as a
+                  <strong>long-term technology partner</strong>, not a
+                  short-term vendor
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Slide 4: Login Experience – Station Masters -->
+        <section>
+          <h2>Login Experience – Station Masters</h2>
+
+          <ul>
+            <li class="fragment">
+              <strong>Simple, secure login</strong> – no unnecessary
+              complexity
+            </li>
+
+            <li class="fragment">
+              Designed for <strong>real station operating conditions</strong>
+            </li>
+
+            <li class="fragment">
+              <strong>Low cognitive load</strong> – focus on railway
+              operations, not technology
+            </li>
+
+            <li class="fragment">
+              <strong>Reliability over novelty</strong> – battle-tested
+              authentication
+            </li>
+          </ul>
+
+          <div class="emphasis-box fragment">
+            <p>
+              <em>
+                Built for operational staff under pressure, not for technology
+                enthusiasts
+              </em>
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 6: Overview of All Nine Registers -->
+        <section>
+          <h2>Overview of All Nine Registers</h2>
+
+          <ul>
+            <li class="fragment">
+              Visual overview of the <strong>nine digitized registers</strong>
+            </li>
+
+            <li class="fragment">
+              Strict adherence to
+              <strong>officially prescribed formats</strong>
+            </li>
+
+            <li class="fragment">
+              <strong>Uniform user experience</strong> across all registers
+            </li>
+
+            <li class="fragment">
+              Consistent navigation, data entry, and audit patterns
+            </li>
+
+            <li class="fragment">
+              No deviation from established railway documentation standards
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 7: Assisted vs Non-Assisted Entry -->
+        <section>
+          <h2>Assisted vs Non-Assisted Entry</h2>
+
+          <div class="two-column">
+            <div>
+              <h3>Assisted Entry</h3>
+
+              <ul>
+                <li class="fragment">Guided input with contextual help</li>
+                <li class="fragment">Built-in validations and safeguards</li>
+                <li class="fragment">Reduces errors for new staff</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3>Non-Assisted Entry</h3>
+
+              <ul>
+                <li class="fragment">Flexibility for experienced staff</li>
+                <li class="fragment">Faster data entry for routine tasks</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="emphasis-box fragment">
+            <p>
+              <strong>Decision Required:</strong> Preferred data entry approach
+              - <em>Assisted</em> or <em>Non-Assisted</em> - to be adopted as
+              the standard going forward.
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 9: Private Number Creation -->
+        <section>
+          <h2>Private Number Creation</h2>
+
+          <ul>
+            <li class="fragment">
+              <strong>Secure and controlled creation</strong> of private
+              numbers
+            </li>
+
+            <li class="fragment">
+              <strong>Clear audit trail</strong> – who created what, when, and
+              why
+            </li>
+
+            <li class="fragment">
+              Alignment with <strong>existing railway practices</strong>
+            </li>
+
+            <li class="fragment">
+              Role-based permissions ensure proper authorization
+            </li>
+
+            <li class="fragment">Prevents unauthorized or duplicate entries</li>
+          </ul>
+        </section>
+
+        <!-- Slide 10: What Has Been Achieved So Far -->
+        <section>
+          <h2>What Has Been Achieved So Far</h2>
+
+          <ul>
+            <li class="fragment">
+              <strong>9 registers implemented</strong> and operational
+            </li>
+
+            <li class="fragment">
+              <strong>Core workflows stabilized</strong> through iterative
+              testing
+            </li>
+
+            <li class="fragment">
+              <strong>Role-based access enforced</strong> across all user
+              types
+            </li>
+
+            <li class="fragment">
+              <strong>System usability validated</strong> with Station Masters
+            </li>
+
+            <li class="fragment">
+              <strong>End-to-end audit trail established</strong> for
+              compliance
+            </li>
+          </ul>
+
+          <div class="emphasis-box fragment">
+            <p><em>Foundation is solid, tested, and ready for expansion</em></p>
+          </div>
+        </section>
+
+        <!-- Slide 15: Next Steps – Current Release -->
+        <section>
+          <h2>Next Steps - Current Release</h2>
+
+          <ul>
+            <li class="fragment">
+              <strong>Biometric signatures</strong> for enhanced
+              authentication
+            </li>
+
+            <li class="fragment">
+              <strong>Progressive Web App (PWA)</strong> for low-connectivity
+              usage
+            </li>
+
+            <li class="fragment">
+              <strong>User management by administrators</strong> – delegated
+              control
+            </li>
+
+            <li class="fragment">
+              <strong>Production-grade deployments</strong> with redundancy
+            </li>
+
+            <li class="fragment">
+              <strong>Regular backups and data protection</strong> mechanisms
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 12: Future Releases & Roadmap - Phase 1 -->
+        <section>
+          <h2>Future Releases & Roadmap</h2>
+
+          <div class="roadmap-phase">
+            <h3>Phase 1: Functional Expansion (Releases 2–6)</h3>
+
+            <ul>
+              <li>Digitization of <strong>29 additional registers</strong></li>
+
+              <li>
+                Expansion to cover
+                <strong>all remaining prescribed registers</strong>
+              </li>
+
+              <li>
+                Focus on
+                <strong>functional completeness and standardization</strong>
+              </li>
+            </ul>
+          </div>
+
+          <div class="emphasis-box">
+            <p>
+              <strong>Goal:</strong> Complete the digitization of all 36
+              registers with standardized workflows
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 13: Future Releases & Roadmap - Phase 2 -->
+        <section>
+          <h2>Future Releases & Roadmap</h2>
+
+          <div class="roadmap-phase">
+            <h3>Phase 2: Organizational Rollout (Releases 7–12)</h3>
+
+            <ul>
+              <li>Rollout across <strong>all stations</strong></li>
+              <li>Coverage across <strong>all six divisions</strong></li>
+
+              <li>
+                <strong>One division per release</strong> – controlled,
+                feedback-driven approach
+              </li>
+            </ul>
+          </div>
+
+          <div class="emphasis-box">
+            <p>
+              <strong>Emphasis:</strong> Controlled rollout, no disruption to
+              operations, continuous validation at each phase
+            </p>
+          </div>
+        </section>
+
+        <!-- Slide 14: Decisions Required from Leadership -->
+        <section>
+          <h2>Decisions Required from Leadership</h2>
+
+          <ul>
+            <li class="fragment">
+              <strong>Approval of phased rollout strategy</strong>
+
+              <ul>
+                <li>Confirm timeline and resource allocation</li>
+              </ul>
+            </li>
+
+            <li class="fragment">
+              <strong>
+                Confirmation of register and division prioritization
+              </strong>
+
+              <ul>
+                <li>Which registers and divisions first?</li>
+              </ul>
+            </li>
+
+            <li class="fragment">
+              <strong>Finalisation of Register Formats</strong>
+
+              <ul>
+                <li>
+                  Approved and finalised schemas for all registers, including
+                  merged registers, are required for implementation.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 18: Feedback & Discussion -->
+        <section>
+          <h2>Feedback & Discussion</h2>
+
+          <ul>
+            <li class="fragment">
+              We invite
+              <strong>structured leadership feedback</strong>
+              on:
+              <ul>
+                <li>Current system capabilities and usability</li>
+                <li>Proposed roadmap and phasing</li>
+                <li>Governance and operational integration</li>
+              </ul>
+            </li>
+
+            <li class="fragment">
+              Reinforce <strong>collaborative execution approach</strong>
+            </li>
+
+            <li class="fragment">
+              Open discussion on concerns, requirements, and expectations
+            </li>
+          </ul>
+        </section>
+
+        <!-- Slide 19: Closing Slide -->
+        <section class="title-slide">
+          <h2>Our Commitment</h2>
+
+          <ul>
+            <li>
+              <strong>Safety</strong> – No compromise on operational safety
+            </li>
+
+            <li>
+              <strong>Compliance</strong> – Adherence to all railway standards
+            </li>
+
+            <li>
+              <strong>Reliability</strong> – Production-grade systems, not
+              experiments
+            </li>
+
+            <li>
+              <strong>Long-term partnership</strong> – We are invested in your
+              success
+            </li>
+          </ul>
+
+          <div class="closing-footer">
+            <p><strong>Thank you</strong></p>
+
+            <p class="closing-subtitle">
+              General Manager and Southern Railway Leadership
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.0.4/dist/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'fade',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            controls: true,
+            progress: true,
+            center: true,
+            touch: true,
+            loop: false,
+            rtl: false,
+            navigationMode: 'default',
+            shuffle: false,
+            fragments: true,
+            fragmentInURL: true,
+            embedded: false,
+            help: true,
+            pause: true,
+            showNotes: false,
+            autoPlayMedia: null,
+            preloadIframes: null,
+            autoAnimate: true,
+            autoAnimateMatcher: null,
+            autoAnimateEasing: 'ease',
+            autoAnimateDuration: 1.0,
+            autoAnimateUnmatched: true,
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            minScale: 0.2,
+            maxScale: 2.0,
+            display: 'block',
+            hideInactiveCursor: true,
+            hideCursorTime: 5000,
+            keyboard: true,
+            overview: true,
+            disableLayout: false,
+            mouseWheel: false,
+            previewLinks: false,
+            postMessage: true,
+            postMessageEvents: false,
+            focusBodyOnPageVisibilityChange: true,
+            scrollActivationWidth: null
+        });
+    </script>
+  </body>
+</html>
